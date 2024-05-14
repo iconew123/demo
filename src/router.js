@@ -32,29 +32,29 @@ const router = createBrowserRouter([
         </>
     },
     {
-        path: "video",
+        path: "/video",
         element: <Root />,
         children: [
             {
-                path: "recommendVideo",
+                path: "/video/recommend",
                 element: <RecommendVideo />
             },
             {
-                path: "searchVideo",
+                path: "/video/search",
                 element: <VideoList />
             }
         ]
     },
     {
-        path: "book",
+        path: "/book",
         element: <Root />,
         children: [
             {
-                path: "recommendBook",
+                path: "/book/recommend",
                 element: <RecommendBook />
             },
             {
-                path: "searchBook",
+                path: "/book/search",
                 element: <BookList />
             }
         ]

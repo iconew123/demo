@@ -1,6 +1,7 @@
 import { Button, Heading, Menu, MenuButton, MenuItem, MenuList } from '@chakra-ui/react';
 import React from 'react';
 import { BiSolidDirections } from 'react-icons/bi';
+import { Link } from 'react-router-dom';
 /*
 <Breadcrumb>
 <BreadcrumbItem>
@@ -34,7 +35,7 @@ const Header = () => {
                     _focus={{ boxShadow: 'outline' }}
                 >Home</MenuButton>
                 <MenuList>
-                    <MenuItem as="a" href="/demo" >Home</MenuItem>
+                    <MenuItem><Link to={"/"}>Home</Link></MenuItem>
                 </MenuList>
             </Menu>
             <Menu>
@@ -51,8 +52,8 @@ const Header = () => {
                     _focus={{ boxShadow: 'outline' }}
                 >VIDEO</MenuButton>
                 <MenuList>
-                    <MenuItem as="a" href="/demo/video/recommendVideo" >추천 비디오</MenuItem>
-                    <MenuItem as="a" href="/demo/video/searchVideo" >비디오 검색</MenuItem>
+                    <MenuItem><Link to={"/video/recommend"}>추천 비디오</Link></MenuItem>
+                    <MenuItem><Link to={"/video/search"}>비디오 검색</Link></MenuItem>
                 </MenuList>
             </Menu>
             <Menu>
@@ -69,8 +70,8 @@ const Header = () => {
                     _focus={{ boxShadow: 'outline' }}
                 >BOOK</MenuButton>
                 <MenuList>
-                    <MenuItem as="a" href="/demo/book/recommendBook" >추천 책</MenuItem>
-                    <MenuItem as="a" href="/demo/book/searchBook" >책 검색</MenuItem>
+                    <MenuItem><Link to={"/book/recommend"}>추천 책</Link></MenuItem>
+                    <MenuItem><Link to={"/book/search"}> 책 검색</Link></MenuItem>
                 </MenuList>
             </Menu>
         </>
