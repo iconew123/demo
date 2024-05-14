@@ -32,7 +32,7 @@ const router = createBrowserRouter([
         </>
     },
     {
-        path: "/video",
+        path: "video",
         element: <Root />,
         children: [
             {
@@ -46,7 +46,7 @@ const router = createBrowserRouter([
         ]
     },
     {
-        path: "/book",
+        path: "book",
         element: <Root />,
         children: [
             {
