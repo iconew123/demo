@@ -7,6 +7,9 @@ import { MdSunny } from "react-icons/md";
 import { Stack, HStack, VStack } from '@chakra-ui/react'
 import { Icon, Table, TableContainer, Tbody, Td, Tfoot, Th, Thead, Tr } from '@chakra-ui/react';
 
+const noimg = "https://search.pstatic.net/sunny/?src=https%3A%2F%2Fus.123rf.com%2F450wm%2Fkoblizeek%2Fkoblizeek2208%2Fkoblizeek220800027%2F189908666-no-image-vector-symbol%2C-missing-available-icon.-no-gallery-for-this-moment-placeholder..jpg&type=a340";
+
+
 const RecommendBook = () => {
 
     const [RecommendList, setRecommendList] = useState([]);
@@ -37,7 +40,6 @@ const RecommendBook = () => {
             ? data.meta.pageable_count / 10 + 1
             : data.meta.pageable_count / 10;
         pageCount.current = Math.floor(pageCount.current);
-        pageCount.current = 15 ? 15 : pageCount.current;
         console.log(pageCount.current);
 
         setRecommendList(data.documents);
@@ -68,6 +70,7 @@ const RecommendBook = () => {
                         <Thead>
                             <Tr>
                                 <Th>No</Th>
+                                <Th>IMG</Th>
                                 <Th>Title</Th>
                                 <Th>Author</Th>
                             </Tr>
@@ -77,6 +80,9 @@ const RecommendBook = () => {
                                 <>
                                     <Tr>
                                         <Td>{(page - 1) * + index + 1}</Td>
+                                        <Td>
+                                            <img src={book.thumbnail !== "" ? book.thumbnail : noimg} />
+                                        </Td>
                                         <Td>
                                             <a href={book.url}>{book.title}</a>
                                         </Td>
