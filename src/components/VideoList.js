@@ -87,6 +87,7 @@ const VideoList = () => {
                         <Thead>
                             <Tr>
                                 <Th>No</Th>
+                                <Th>thumbnail</Th>
                                 <Th>Title</Th>
                                 <Th>Author</Th>
                             </Tr>
@@ -96,6 +97,9 @@ const VideoList = () => {
                                 <>
                                     <Tr>
                                         <Td>{(page - 1) * + index + 1}</Td>
+                                        <Td>
+                                            <img src={video.thumbnail} />
+                                        </Td>
                                         <Td>
                                             <a href={video.url}>{video.title}</a>
                                         </Td>

@@ -38,13 +38,7 @@ const router = createBrowserRouter([
             {
                 path: "recommendVideo",
                 element: <RecommendVideo />
-            }
-        ]
-    },
-    {
-        path: "/video",
-        element: <Root />,
-        children: [
+            },
             {
                 path: "searchVideo",
                 element: <VideoList />
@@ -58,13 +52,7 @@ const router = createBrowserRouter([
             {
                 path: "recommendBook",
                 element: <RecommendBook />
-            }
-        ]
-    },
-    {
-        path: "/book",
-        element: <Root />,
-        children: [
+            },
             {
                 path: "searchBook",
                 element: <BookList />
